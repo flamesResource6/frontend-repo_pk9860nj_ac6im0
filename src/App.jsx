@@ -1,26 +1,34 @@
-import { useState } from 'react'
+import Hero from './components/Hero'
+import Showcase from './components/Showcase'
+import OurStory from './components/OurStory'
+import CityFavourites from './components/CityFavourites'
+import Configurator from './components/Configurator'
+import Location from './components/Location'
+import SocialWall from './components/SocialWall'
+import Reviews from './components/Reviews'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen w-full bg-[#111111]">
+      <Hero />
+      <Showcase />
+      <OurStory />
+      <CityFavourites />
+      <Configurator />
+      <Location />
+      <SocialWall />
+      <Reviews />
+      <footer className="bg-[#0b0b0b] border-t border-white/10 py-12">
+        <div className="px-6 flex flex-col items-center text-center">
+          <div className="text-3xl font-extrabold" style={{ color: '#FFB347' }}>Flame & Wrap Co.</div>
+          <nav className="mt-4 flex items-center gap-6 text-sm text-[#FFF9F3]/70">
+            <a href="#" className="hover:text-white">Menu</a>
+            <a href="#build" className="hover:text-white">Order Online</a>
+            <a href="#location" className="hover:text-white">Contact</a>
+          </nav>
+          <div className="mt-6 text-[#FFB347]/80">© 2025 Flame & Wrap Co. | Crafted with love and garlic.</div>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
